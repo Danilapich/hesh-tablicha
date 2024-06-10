@@ -1,0 +1,33 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Map<String, Integer> hashMap = new HashMap<>();
+
+
+        hashMap.put("Ключ 1", 10);
+        hashMap.put("Ключ 2", 20);
+        hashMap.put("Ключ 3", 30);
+
+
+        System.out.println("Значение для ключа \"Ключ 2\": " + hashMap.get("Ключ 2"));
+
+
+        hashMap.remove("Ключ 3");
+
+
+        if (hashMap.containsKey("Ключ 3")) {
+            System.out.println("Ключ \"Ключ 3\" найден в хэш-таблице.");
+        } else {
+            System.out.println("Ключ \"Ключ 3\" не найден в хэш-таблице.");
+        }
+
+
+        System.out.println("Элементы хэш-таблицы:");
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            System.out.println("Ключ: " + entry.getKey() + ", Значение: " + entry.getValue());
+        }
+    }
+}
